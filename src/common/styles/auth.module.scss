@@ -1,0 +1,34 @@
+.container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-size: 16px;
+    height: 100vh;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 200px;
+
+    .field {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .submit {
+        font-size: 16px;
+        margin-top: 20px;
+        padding: 10px 5px;
+        width: 100%;
+    }
+}

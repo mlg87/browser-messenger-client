@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 90%;
+    padding: 10px 20px;
+    max-width: 15%;
+
+    header {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 780px) {
+    .container {
+        max-width: 100%;
+    }
+}

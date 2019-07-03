@@ -1,0 +1,44 @@
+.container {
+    flex: 1;
+    height: 100vh;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    flex: 1;
+    height: 100px;
+    padding: 10px 20px;
+
+    h1 {
+        margin-bottom: 0px;
+    }
+
+    .username {
+        color: green;
+    }
+
+    .welcomeMessage {
+        align-items: center;
+        display: flex;
+    }
+
+    .logout {
+        cursor: pointer
+        ;
+        &:hover {
+            color: pink;
+            text-decoration: underline;
+        }
+    }
+}
+
+.main {
+    display: flex;
+}
+
+@media (max-width: 780px) {
+    .main {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    height: 45%;
+    padding: 10px 20px;
+
+    header {
+        margin: 10px;
+    }
+}
+
+.conversation {
+    border: 1px dashed black;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 10px;
+    max-height: 600px;
+    min-height: 300px;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.messageBubble {
+    border-radius: 2px;
+    margin: 5px;
+    padding: 5px 10px;
+
+    .timestamp {
+        font-size: 11px;
+    }
+
+    &.currentUser {
+        align-self: flex-end;
+        background-color: rgba(green, 0.3);
+    }
+
+    &.otherUser {
+        align-self: flex-start;
+        background-color: rgba(gray, 0.3);
+    }
+}
+
+.messageContainer {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    margin-top: 20px;
+
+    .messageInput {
+        flex-grow: 1;
+        height: 40px;
+    }
+
+    .submit {
+        min-width: 100px;
+    }
+}
+
+.typingIndicator {
+    height: 20px;
+    margin-left: 10px;
+}
