@@ -54,7 +54,7 @@ const PrivateRoute = ({ component: Component, isAuthenticated, ...other }) => {
 
 const Root: React.FunctionComponent<IRootProps> = props => {
 
-    // HACK this needs to be referenced in the main "render" so the mobx observer
+    // this needs to be referenced in the main "render" so the mobx observer
     // works correctly
     const { isAuthenticated } = props.auth;
 
