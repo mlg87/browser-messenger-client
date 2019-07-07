@@ -1,5 +1,7 @@
 # browser-messenger client
-move over slack. there's a new messenging service in town. find the live version at messenger.masoncod.es
+move over slack. there's a new messenging service in town. find the live version at [messenger.masoncod.es](https://messenger.masoncod.es)
+
+this is front-end support for [browser-messenger server](https://github.com/mlg87/browser-messenger-server)
 
 ## running locally
 app is bootsrapped with `create-react-app`, so running locally is very straightforward. after cloning the repo and installing dependencies, add an `.env` file at the root. the only variable required is `REACT_APP_API_URL`. if running the [browser-messenger-server](https://github.com/mlg87/browser-messenger-server) locally as well, this should be `http://localhost:5000`
