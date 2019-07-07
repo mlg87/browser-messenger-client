@@ -85,7 +85,7 @@ const handleSubmit = async (
     try {
 
         await props.auth.login({ password, username });
-        props.history.push('/home');
+        props.history.push('/chat');
 
     } catch (error) {
 

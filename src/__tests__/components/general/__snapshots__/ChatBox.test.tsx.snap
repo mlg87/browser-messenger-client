@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatBox renders 1`] = `
+<div
+  class="container"
+>
+  <header>
+    <h2
+      class="sectionTitle"
+    >
+      selected conversation
+    </h2>
+    <i>
+      no conversation selected. pick one from the user list
+    </i>
+  </header>
+  <div
+    class="conversation"
+  />
+  <div
+    class="typingIndicator"
+  />
+  <form
+    class="messageContainer"
+    data-testid="chat-box-message-form"
+  >
+    <input
+      class="messageInput"
+      disabled=""
+      placeholder="select a user to start a conversation"
+      value=""
+    />
+    <input
+      class="submit"
+      disabled=""
+      type="submit"
+      value="send"
+    />
+  </form>
+</div>
+`;
+
+exports[`ChatBox the conversation between the authed user and another user renders a message saying it is the beginning of the convesation if there are no messages 1`] = `
+<div
+  class="container"
+>
+  <header>
+    <h2
+      class="sectionTitle"
+    >
+      selected conversation
+    </h2>
+    <i>
+      conversation with 
+      test-456
+    </i>
+  </header>
+  <div
+    class="conversation"
+  >
+    <div>
+      this is the beginning of your conversation
+    </div>
+  </div>
+  <div
+    class="typingIndicator"
+  />
+  <form
+    class="messageContainer"
+    data-testid="chat-box-message-form"
+  >
+    <input
+      class="messageInput"
+      placeholder="start typing..."
+      value=""
+    />
+    <input
+      class="submit"
+      disabled=""
+      type="submit"
+      value="send"
+    />
+  </form>
+</div>
+`;
+
+exports[`ChatBox the conversation between the authed user and another user renders the messages from the users if there are any 1`] = `
+<div
+  class="container"
+>
+  <header>
+    <h2
+      class="sectionTitle"
+    >
+      selected conversation
+    </h2>
+    <i>
+      conversation with 
+      test-456
+    </i>
+  </header>
+  <div
+    class="conversation"
+  >
+    <div
+      class="messageBubble currentUser"
+    >
+      <div
+        class="timestamp"
+      >
+        15:51 07/02/19
+      </div>
+      <div>
+        hi
+      </div>
+    </div>
+  </div>
+  <div
+    class="typingIndicator"
+  />
+  <form
+    class="messageContainer"
+    data-testid="chat-box-message-form"
+  >
+    <input
+      class="messageInput"
+      placeholder="start typing..."
+      value=""
+    />
+    <input
+      class="submit"
+      disabled=""
+      type="submit"
+      value="send"
+    />
+  </form>
+</div>
+`;

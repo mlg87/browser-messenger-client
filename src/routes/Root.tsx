@@ -12,7 +12,7 @@ const AuthCheck = ({ component: Component, isAuthenticated, ...other }) => {
 
         if (isAuthenticated) {
 
-            return <Redirect push to={{ pathname: '/home' }} />;
+            return <Redirect push to={{ pathname: '/chat' }} />;
 
         }
 
@@ -70,7 +70,7 @@ const Root: React.FunctionComponent<IRootProps> = props => {
                 <AuthCheck isAuthenticated={isAuthenticated} exact path='/' component={Landing} />
                 <AuthCheck isAuthenticated={isAuthenticated} path='/login' component={Login} />
                 <AuthCheck isAuthenticated={isAuthenticated} path='/register' component={Register} />
-                <PrivateRoute isAuthenticated={isAuthenticated} path='/home' component={Protected} />
+                <PrivateRoute isAuthenticated={isAuthenticated} path='/chat' component={Protected} />
                 <Route component={NotFound} />
             </Switch>
         </BrowserRouter>

@@ -27,15 +27,19 @@ const ChatBox: React.FunctionComponent<IChatBoxProps> = props => {
     const { conversationId } = props.messages;
 
     // used to cleanup values of form when the selected user changes
-    const [currentSelectedUserId, setCurrentSelectedUserId] = useState<number | undefined>(undefined);
+    // tslint:disable-next-line:max-line-length
+    const [currentSelectedUserId, setCurrentSelectedUserId] = useState<number | undefined>(selectedUser ? selectedUser.id : undefined);
+    const [isFetching, setIsFetching] = useState(false);
     const [isOtherUserTyping, setIsOtherUserTyping] = useState(false);
     const [message, setMessage] = useState<string>('');
 
     const state: IChatBoxState = {
         currentSelectedUserId,
+        isFetching,
         isOtherUserTyping,
         message,
         setCurrentSelectedUserId,
+        setIsFetching,
         setIsOtherUserTyping,
         setMessage
     };
@@ -132,7 +136,8 @@ const ChatBox: React.FunctionComponent<IChatBoxProps> = props => {
 
         if (conversationId) {
 
-            props.messages.getMessagesForConversation();
+            setIsFetching(true);
+            props.messages.getMessagesForConversation().then(() => setIsFetching(false));
             socket.emit('join-room', conversationId);
 
         }
@@ -156,11 +161,12 @@ const ChatBox: React.FunctionComponent<IChatBoxProps> = props => {
                 {_renderDescriptor(props)}
             </header>
             <div className={styles.conversation} ref={conversationRef}>
-                {_renderConversation(props)}
+                {_renderConversation(state, props)}
             </div>
             {_renderTypingIndicator(state, props)}
             <form
                 className={styles.messageContainer}
+                data-testid='chat-box-message-form'
                 onSubmit={e => _handleSubmit(e, socket, state, props)}
             >
                 <input
@@ -211,14 +217,21 @@ const useCleanup = (
 //
 
 const _renderConversation = (
+    state: IChatBoxState,
     props: IChatBoxProps
 ) => {
 
     const { messages, auth } = props;
 
-    if (!messages.messages.length) {
+    if (state.isFetching) {
 
-        return null;
+        return <div>loading...</div>;
+
+    }
+
+    if (!messages.messages.length && props.users.selectedUser) {
+
+        return <div>this is the beginning of your conversation</div>;
 
     }
 
@@ -352,9 +365,11 @@ export interface IChatBoxProps {
 
 export interface IChatBoxState {
     readonly currentSelectedUserId?: number;
+    readonly isFetching: boolean;
     readonly isOtherUserTyping: boolean;
     readonly message?: string;
     readonly setCurrentSelectedUserId: (value?: number) => void;
+    readonly setIsFetching: (value: boolean) => void;
     readonly setIsOtherUserTyping: (value: boolean) => void;
     readonly setMessage: (value: string) => void;
 }

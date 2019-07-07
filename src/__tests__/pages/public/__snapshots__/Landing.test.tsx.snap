@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing renders 1`] = `
+<div
+  class="container"
+>
+  <div>
+    <h1>
+      welcome. let's do some chatting.
+    </h1>
+    <span
+      class="link-container"
+    >
+      <a
+        href="/login"
+      >
+        login
+      </a>
+      <a
+        href="/register"
+      >
+        register
+      </a>
+    </span>
+  </div>
+</div>
+`;

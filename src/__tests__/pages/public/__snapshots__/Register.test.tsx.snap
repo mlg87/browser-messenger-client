@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders 1`] = `
+<div
+  class="container"
+>
+  <div>
+    <h1>
+      register
+    </h1>
+    <form
+      class="form"
+    >
+      <input
+        class="field"
+        name="username"
+        placeholder="username"
+        type="text"
+        value=""
+      />
+      <input
+        class="field"
+        name="password"
+        placeholder="password"
+        type="password"
+        value=""
+      />
+      <input
+        class="field"
+        name="passwordConfirm"
+        placeholder="confirm password"
+        type="password"
+        value=""
+      />
+      <button
+        class="submit"
+        type="submit"
+      >
+        register
+      </button>
+    </form>
+    <a
+      href="/login"
+    >
+      login
+    </a>
+  </div>
+</div>
+`;

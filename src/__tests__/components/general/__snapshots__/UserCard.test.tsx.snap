@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard renders 1`] = `
+<div
+  class="container"
+  data-testid="user-card"
+  role="button"
+>
+  <div>
+    test
+  </div>
+  <div
+    class="statusIndicator"
+  />
+</div>
+`;
+
+exports[`UserCard sets the selected user when the user clicks the card 1`] = `
+<div
+  class="container"
+  data-testid="user-card"
+  role="button"
+>
+  <div
+    class="selectedIndicator"
+  >
+    &gt;&gt;&gt;
+  </div>
+  <div>
+    test
+  </div>
+  <div
+    class="statusIndicator"
+  />
+</div>
+`;

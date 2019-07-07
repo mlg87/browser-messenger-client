@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserList renders 1`] = `
+<div
+  class="container"
+>
+  <header>
+    <h2
+      class="sectionTitle"
+    >
+      users
+    </h2>
+    <i>
+      select another user to start chatting
+    </i>
+  </header>
+  <div>
+    loading...
+  </div>
+</div>
+`;

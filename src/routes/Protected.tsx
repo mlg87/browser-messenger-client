@@ -6,7 +6,7 @@ const Protected: React.FunctionComponent = () => {
 
     return (
         <Switch>
-            <Route path='/home' component={Home} />
+            <Route path='/chat' component={Home} />
         </Switch>
     );
 

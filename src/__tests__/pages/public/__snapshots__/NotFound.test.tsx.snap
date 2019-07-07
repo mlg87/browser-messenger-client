@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound renders 1`] = `
+<div>
+  <h1>
+    404: Not Found
+  </h1>
+  <p>
+    Sorry, Charlie. We don't have anything at 
+    <strong>
+      /nope
+    </strong>
+  </p>
+</div>
+`;

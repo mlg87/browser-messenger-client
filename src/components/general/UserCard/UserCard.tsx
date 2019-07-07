@@ -14,6 +14,7 @@ const UserCard: React.FunctionComponent<IUserCardProps> = props => {
     return (
         <div
             className={styles.container}
+            data-testid='user-card'
             onClick={() => _handleClick(props)}
             role='button'
         >
